@@ -607,93 +607,109 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     align-self: center !important;
   }
   .main-header {
-    height: 38px !important;
+    height: 34px !important;
     min-width: 100vw !important;
     max-width: 100vw !important;
-    padding: 0 2vw !important;
+    padding: 0 1vw !important;
     box-sizing: border-box !important;
   }
   .nav {
-    gap: 12px !important;
-    flex-wrap: wrap !important;
+    gap: 4px !important;
+    flex-wrap: nowrap !important;
     height: 100% !important;
     padding: 0 !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scrollbar-width: none;
   }
+  .nav::-webkit-scrollbar { display: none; }
   .tab-btn {
-    padding: 4px 8px !important;
-    font-size: 0.85em !important;
-    min-width: 70px !important;
-    max-width: 32vw !important;
+    padding: 2px 6px !important;
+    font-size: 0.78em !important;
+    min-width: 60px !important;
+    max-width: 28vw !important;
     white-space: nowrap !important;
+    margin: 0 2px !important;
   }
   .side-panel {
     display: none !important;
   }
   .chess-block, .big-white-block, .big-white-block.prices, .audit-block {
-    padding: 12px 6px !important;
-    font-size: 0.95em !important;
-    min-height: 80px !important;
+    padding: 8px 4px !important;
+    font-size: 0.85em !important;
+    min-height: 60px !important;
     max-height: none !important;
   }
   .big-white-block, .big-white-block.prices, .audit-block {
-    padding: 14px 6px !important;
-    min-height: 80px !important;
-    font-size: 0.95em !important;
+    padding: 10px 4px !important;
+    min-height: 60px !important;
+    font-size: 0.85em !important;
   }
   .banner {
-    height: 160px !important;
-    min-height: 120px !important;
+    height: 120px !important;
+    min-height: 90px !important;
     max-width: 100vw !important;
-    margin: 12px auto !important;
+    margin: 8px auto !important;
   }
   .banner-text {
-    padding: 0 8px !important;
-    font-size: 1em !important;
-    gap: 8px !important;
+    padding: 0 4px !important;
+    font-size: 0.95em !important;
+    gap: 6px !important;
   }
   .banner-main, .banner-sub {
-    font-size: 1.1em !important;
+    font-size: 0.95em !important;
   }
   .contact-btn, .last-contact-btn {
-    padding: 8px 18px !important;
-    font-size: 1em !important;
-    margin-top: 6px !important;
+    padding: 6px 12px !important;
+    font-size: 0.95em !important;
+    margin-top: 4px !important;
   }
   .partners-list {
-    gap: 10px !important;
+    gap: 6px !important;
     flex-wrap: wrap !important;
     max-width: 100vw !important;
   }
   .partner-item {
-    min-width: 80px !important;
-    max-width: 32vw !important;
+    min-width: 60px !important;
+    max-width: 28vw !important;
   }
   .partner-name {
-    font-size: 0.95em !important;
-    max-width: 80px !important;
+    font-size: 0.85em !important;
+    max-width: 60px !important;
   }
   /* Центрирование модального окна на мобильных */
   .contact-modal {
-    min-width: 90vw !important;
+    min-width: 92vw !important;
     max-width: 98vw !important;
     left: 50% !important;
     top: 50% !important;
-    transform: translate(-50%, -52%) !important; /* чуть выше центра */
-    padding: 14px 8px 14px 8px !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 10px 4px 10px 4px !important;
     box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .modal-response-text {
-    font-size: 1em !important;
-    margin-bottom: 12px !important;
-    margin-top: 2px !important;
+    font-size: 0.95em !important;
+    margin-bottom: 18px !important;
+    margin-top: 12px !important;
+    text-align: center !important;
   }
   .modal-icons {
-    gap: 12px !important;
-    margin-top: 4px !important;
+    gap: 18px !important;
+    margin-top: 18px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    display: flex !important;
   }
   .modal-icon img {
-    width: 38px !important;
-    height: 38px !important;
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 }
 
