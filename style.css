@@ -598,18 +598,6 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     overflow-x: hidden !important;
     padding-top: 38px !important; /* высота .main-header */
   }
-  body::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 200vw; height: 100%;
-  background: url("bc.jpg") left 40%/60% no-repeat; /* смещаем левее и ниже */
-  opacity: 0.08;
-  z-index: -1;
-  pointer-events: none;
-  background-position: left 40% calc(var(--parallax-shift, 0) * 0.5); /* параллакс + смещение вниз */
-  will-change: background-position;
-}
   /* Верхняя панель всегда над контентом, но не перекрывает баннер */
   .main-header {
     position: fixed !important;
@@ -683,7 +671,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     min-height: 120px !important;
   }
   .banner-text {
-    font-size: 2em !important;
+    font-size: 1.3em !important;
   }
   .side-panel {
     display: none !important;
