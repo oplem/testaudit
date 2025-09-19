@@ -57,13 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
             block.classList.toggle('expanded');
             expandedBlock = block.classList.contains('expanded') ? block : null;
         });
-        block.addEventListener('touchstart', () => {
-            if (expandedBlock && expandedBlock !== block) {
-                expandedBlock.classList.remove('expanded');
-            }
-            block.classList.toggle('expanded');
-            expandedBlock = block.classList.contains('expanded') ? block : null;
-        });
     });
 
     // Работа панели "Содержимое"
@@ -74,15 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (targetBlock) {
                 targetBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 // раскрываем нужный блок, скрываем предыдущий
-                document.querySelectorAll('.chess-block.expanded').forEach(b => b.classList.remove('expanded'));
-                targetBlock.classList.add('expanded');
-            }
-        });
-        item.addEventListener('touchstart', () => {
-            const targetId = item.getAttribute('data-target');
-            const targetBlock = document.getElementById(targetId);
-            if (targetBlock) {
-                targetBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 document.querySelectorAll('.chess-block.expanded').forEach(b => b.classList.remove('expanded'));
                 targetBlock.classList.add('expanded');
             }
@@ -111,29 +95,11 @@ panelToggle.addEventListener('click', () => {
             block.classList.toggle('expanded');
             expandedBlock = block.classList.contains('expanded') ? block : null;
         });
-        arrow.addEventListener('touchstart', (e) => {
-            e.stopPropagation();
-            const block = arrow.closest('.chess-block');
-            if (expandedBlock && expandedBlock !== block) {
-                expandedBlock.classList.remove('expanded');
-            }
-            block.classList.toggle('expanded');
-            expandedBlock = block.classList.contains('expanded') ? block : null;
-        });
     });
 
     // Работа панели "Содержимое"
     document.querySelectorAll('.side-panel li').forEach(item => {
         item.addEventListener('click', () => {
-            const targetId = item.getAttribute('data-target');
-            const targetBlock = document.getElementById(targetId);
-            if (targetBlock) {
-                targetBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                document.querySelectorAll('.chess-block.expanded').forEach(b => b.classList.remove('expanded'));
-                targetBlock.classList.add('expanded');
-            }
-        });
-        item.addEventListener('touchstart', () => {
             const targetId = item.getAttribute('data-target');
             const targetBlock = document.getElementById(targetId);
             if (targetBlock) {
@@ -247,5 +213,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === 'Escape') closeModal();
   });
 });
-
 
