@@ -620,7 +620,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     display: flex !important;
   }
   .tab-btn {
-    font-size: 0.95em !important;
+    font-size: 0.80em !important;
     text-align: center !important;
     justify-content: center !important;
     align-items: center !important;
@@ -641,7 +641,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     font-weight: bold !important;
   }
   .banner {
-    margin-top: 54px !important;
+    margin-top: 26px !important;
     margin-bottom: 10px !important;
     height: 120px !important;
     min-height: 90px !important;
@@ -727,10 +727,10 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   .big-white-block, .big-white-block.prices, .audit-block {
     padding: 12px 6px !important;
     min-height: 120px !important;
-    max-width: 98vw !important;
+    max-width: 90vw !important;
     margin: 18px auto !important;
     border-radius: 18px !important;
-    font-size: 1em !important;
+    font-size: 0.9em !important;
     box-sizing: border-box !important;
     word-break: break-word !important;
   }
@@ -808,6 +808,18 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   }
   .section-block:not(:last-child) {
     margin-bottom: 18px !important;
+  }
+  #block7,
+  #block-uslugi {
+    left: unset !important;
+    transform: unset !important;
+    position: static !important;
+    max-width: 98vw !important;
+    width: 98vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -925,6 +937,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   transform: scale(1.12);
   box-shadow: 0 4px 18px rgba(54,128,212,0.18);
 }
+
 
 
 
