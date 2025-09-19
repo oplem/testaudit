@@ -92,7 +92,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   transition: transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 .side-panel.hidden { transform: translateX(-240px); }
-.side-panel h2 { color: var(--main-color); font-size: 1.3em; margin-bottom: 24px; }
+.side-panel h2 { color: var(--main-color); font-size: 1.3em; margin-bottom: 17px; margin-top: 21px;}
 .side-panel ul { list-style: none; padding: 0; margin: 0; width: 100%; }
 .side-panel li {
   color: var(--main-color);
@@ -132,7 +132,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   transform: rotate(135deg);
   transition: transform var(--transition);
 }
-.panel-arrow.rotated::before { transform: rotate(-765deg); }
+.panel-arrow.rotated::before { transform: rotate(-45deg); }
 
 /* --- Баннер --- */
 .banner {
@@ -583,20 +583,44 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
 
 /* --- Адаптивность --- */
 @media (max-width: 900px) {
+/* --- Адаптивность --- */
+@media (max-width: 900px) {
+  html, body { overflow-x: hidden; } /* запрет горизонтального скролла */
   body { padding: 0; flex-direction: column; }
   main { margin-left: 0; }
+  .main-header {
+    height: 44px !important; /* уменьшить высоту хедера */
+  }
+  .tab-btn {
+    padding: 7px 12px !important; /* уменьшить паддинг вкладок */
+    font-size: 0.95em !important;
+  }
   .side-panel {
     position: static; width: 100vw; height: auto;
     flex-direction: row; align-items: flex-start;
     padding: 18px 8px;
   }
+  .side-panel h2 {
+    margin-top: 10px !important; /* чуть ниже на мобильных */
+    margin-bottom: 18px !important;
+  }
   .chess-block, .big-white-block, .big-white-block.prices {
-    flex-direction: column; gap: 48px; padding-right: 0;
+    flex-direction: column; gap: 32px; padding-right: 0;
     align-items: stretch; max-width: 98%; min-width: unset;
-    min-height: 120px; padding: 24px 10px; font-size: 1em;
+    min-height: 80px; padding: 14px 6px; font-size: 0.95em;
     margin-left: 0 !important; margin-right: 0 !important; align-self: center !important;
   }
-  .chess-block h3 { font-size: 1.3em; }
+  .big-white-block, .big-white-block.prices {
+    padding: 18px 8px !important; /* уменьшить паддинг для цен */
+    min-height: 120px !important;
+    font-size: 1em !important;
+  }
+  .audit-block {
+    padding: 18px 8px !important; /* уменьшить паддинг для блока аудита */
+    min-height: 120px !important;
+    font-size: 1em !important;
+  }
+  .chess-block h3 { font-size: 1.1em; }
   .price-list .full-package::before {
     left: -10px; right: -10px;
     clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 100%, 16px 100%);
@@ -604,6 +628,28 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   .side-panel {
     display: none !important;
   }
+  .contact-modal {
+    min-width: 90vw !important;
+    max-width: 98vw !important;
+    padding: 18px 8px 18px 8px !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .modal-response-text {
+    font-size: 1em !important;
+    margin-bottom: 18px !important;
+    margin-top: 4px !important;
+  }
+  .modal-icons {
+    gap: 18px !important;
+    margin-top: 8px !important;
+  }
+  .modal-icon img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
 }
 
 /* --- Секции --- */
