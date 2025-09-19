@@ -608,16 +608,16 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   }
   /* Уменьшаем заголовки, увеличиваем обычный текст */
   h1, h2, h3 {
-    font-size: 1.00em !important;
+    font-size: 1.4em !important;
   }
   p, li, .banner-text, .chess-block, .big-white-block, .audit-block {
-    font-size: 0.90em !important;
+    font-size: 1.2em !important;
   }
   /* Верхняя панель и вкладки */
   .main-header {
     height: 38px !important;
-    min-width: 85vw !important;
-    max-width: 85vw !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
     padding: 0 !important;
     box-sizing: border-box !important;
     display: flex !important;
@@ -638,9 +638,9 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   .nav::-webkit-scrollbar { display: none; }
   .tab-btn {
     padding: 4px 10px !important;
-    font-size: 1em !important;
-    min-width: 60px !important;
-    max-width: 30vw !important;
+    font-size: 0.9em !important;
+    min-width: 30px !important;
+    max-width: 50vw !important;
     white-space: nowrap !important;
     margin: 0 2px !important;
     border-radius: 6px !important;
@@ -659,17 +659,14 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   }
   .big-white-block, .big-white-block.prices, .audit-block {
     padding: 10px 4px !important;
-    min-height: 90px !important;
+    min-height: 100px !important;
+    min-height: 120px !important;
   }
   .banner-text {
     font-size: 1.00em !important;
   }
   .side-panel {
     display: none !important;
-  }
-  .big-white-block, .big-white-block.prices, .audit-block {
-    padding: 10px 4px !important;
-    min-height: 60px !important;
   }
   .banner {
     height: 120px !important;
@@ -853,5 +850,6 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   transform: scale(1.12);
   box-shadow: 0 4px 18px rgba(54,128,212,0.18);
 }
+
 
 
