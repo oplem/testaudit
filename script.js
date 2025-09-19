@@ -158,13 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-// ...existing code...
-document.querySelector('.left-btn').addEventListener('click', function() {
-  document.querySelector('.news-carousel').scrollBy({ left: -340, behavior: 'smooth' });
-});
-document.querySelector('.right-btn').addEventListener('click', function() {
-  document.querySelector('.news-carousel').scrollBy({ left: 340, behavior: 'smooth' });
-});
 
 function initGallery(blockId, imgList, delay = 4000, initialOffset = 0) {
   const block = document.getElementById(blockId);
@@ -254,4 +247,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === 'Escape') closeModal();
   });
 });
+
 
