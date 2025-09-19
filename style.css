@@ -598,6 +598,18 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     overflow-x: hidden !important;
     padding-top: 38px !important; /* высота .main-header */
   }
+  body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 200vw; height: 100%;
+  background: url("bc.jpg") left 40%/60% no-repeat; /* смещаем левее и ниже */
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+  background-position: left 40% calc(var(--parallax-shift, 0) * 0.5); /* параллакс + смещение вниз */
+  will-change: background-position;
+}
   /* Верхняя панель всегда над контентом, но не перекрывает баннер */
   .main-header {
     position: fixed !important;
@@ -611,11 +623,8 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     align-items: center !important;
     justify-content: center !important;
   }
-  main {
-    margin-top: 12px !important; /* расстояние между панелью и баннером */
-  }
   .banner {
-    margin-top: 18px !important; /* расстояние между баннером и верхней панелью */
+    margin-top: 50px !important; /* расстояние между баннером и верхней панелью */
     margin-bottom: 8px !important;
     height: 120px !important;
     min-height: 90px !important;
@@ -649,14 +658,14 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   /* Заголовки и текст в блоках */
   h1, h2, h3 {
     font-size: 1.15em !important;
-    margin-bottom: 6px !important; /* уменьшить расстояние до текста */
+    margin-bottom: 2px !important; /* уменьшить расстояние до текста */
   }
   .chess-block p,
   .big-white-block p,
   .audit-block p,
   main p,
   li {
-    font-size: 0.98em !important; /* основной текст чуть меньше */
+    font-size: 0.69em !important; /* основной текст чуть меньше */
     margin-top: 0 !important;
   }
   /* Убираем стрелку-переключатель панели */
@@ -674,7 +683,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
     min-height: 120px !important;
   }
   .banner-text {
-    font-size: 1.00em !important;
+    font-size: 2em !important;
   }
   .side-panel {
     display: none !important;
@@ -861,6 +870,7 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   transform: scale(1.12);
   box-shadow: 0 4px 18px rgba(54,128,212,0.18);
 }
+
 
 
 
