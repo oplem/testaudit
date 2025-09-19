@@ -165,49 +165,6 @@ document.querySelector('.left-btn').addEventListener('click', function() {
 document.querySelector('.right-btn').addEventListener('click', function() {
   document.querySelector('.news-carousel').scrollBy({ left: 340, behavior: 'smooth' });
 });
-// ...existing code...
-// ...existing code...
-document.addEventListener("DOMContentLoaded", () => {
-  const newsItems = document.querySelectorAll('.news-item');
-  let currentNews = Math.floor(newsItems.length / 2); // центрируем по количеству
-
-  function updateNewsCarousel(idx) {
-    newsItems.forEach((item, i) => {
-      item.className = 'news-item'; // сбросить все классы
-    });
-
-    if (newsItems.length === 0) return;
-
-    // Центр
-    newsItems[idx].classList.add('active');
-
-    // 4 слева
-    for (let l = 1; l <= 4; l++) {
-      let leftIdx = (idx - l + newsItems.length) % newsItems.length;
-      newsItems[leftIdx].classList.add('left' + l);
-    }
-    // 4 справа
-    for (let r = 1; r <= 4; r++) {
-      let rightIdx = (idx + r) % newsItems.length;
-      newsItems[rightIdx].classList.add('right' + r);
-    }
-  }
-
-  document.querySelector('.left-btn').addEventListener('click', function() {
-    currentNews = (currentNews - 1 + newsItems.length) % newsItems.length;
-    updateNewsCarousel(currentNews);
-  });
-  document.querySelector('.right-btn').addEventListener('click', function() {
-    currentNews = (currentNews + 1) % newsItems.length;
-    updateNewsCarousel(currentNews);
-  });
-
-  // Инициализация
-  updateNewsCarousel(currentNews);
-});
-// ...existing code...
-
-// ...existing code...
 
 function initGallery(blockId, imgList, delay = 4000, initialOffset = 0) {
   const block = document.getElementById(blockId);
@@ -297,3 +254,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === 'Escape') closeModal();
   });
 });
+
