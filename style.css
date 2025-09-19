@@ -608,11 +608,10 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   }
   /* Уменьшаем заголовки, увеличиваем обычный текст */
   h1, h2, h3 {
-    font-size: 1.15em !important;
-    margin-bottom: 12px !important;
+    font-size: 1.7em !important;
   }
   p, li, .banner-text, .chess-block, .big-white-block, .audit-block {
-    font-size: 1.08em !important;
+    font-size: 1.5em !important;
   }
   /* Верхняя панель и вкладки */
   .main-header {
@@ -655,14 +654,12 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   }
   .chess-block, .big-white-block, .big-white-block.prices, .audit-block {
     padding: 8px 4px !important;
-    font-size: 0.50em !important; /* как у баннера */
-    min-height: 60px !important;
+    min-height: 90px !important;
     max-height: none !important;
   }
   .big-white-block, .big-white-block.prices, .audit-block {
     padding: 10px 4px !important;
-    min-height: 60px !important;
-    font-size: 0.95em !important; /* как у баннера */
+    min-height: 90px !important;
   }
   .banner-text {
     font-size: 0.60em !important;
@@ -673,7 +670,6 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   .big-white-block, .big-white-block.prices, .audit-block {
     padding: 10px 4px !important;
     min-height: 60px !important;
-    font-size: 0.85em !important;
   }
   .banner {
     height: 120px !important;
@@ -683,7 +679,6 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   }
   .banner-text {
     padding: 0 4px !important;
-    font-size: 0.95em !important;
     gap: 6px !important;
   }
   .banner-main, .banner-sub {
@@ -858,3 +853,4 @@ h3 { font-size: 2.2em; margin-bottom: 22px; }
   transform: scale(1.12);
   box-shadow: 0 4px 18px rgba(54,128,212,0.18);
 }
+
